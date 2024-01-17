@@ -2,6 +2,17 @@ import streamlit as st
 #streamlit is used easy to create web apps,very intuitive to use,integrates very well with graphs.
 import functions
 
+
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
+# Your app code goes here
+
 todos=functions.get_todos()
 
 def add_todo():
